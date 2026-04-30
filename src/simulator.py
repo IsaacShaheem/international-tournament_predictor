@@ -38,11 +38,16 @@ def simulate_match(team1, team2):
 
 def simulate_tournament():
     """Simulate one 8-team knockout tournament and return the champion."""
+    # Shuffle the bracket each tournament so the simulation is not tied to
+    # one fixed set of quarterfinal matchups. This makes the results more realistic.
+    teams = TEAMS.copy()
+    random.shuffle(teams)
+
     quarterfinal_winners = [
-        simulate_match(TEAMS[0], TEAMS[1]),
-        simulate_match(TEAMS[2], TEAMS[3]),
-        simulate_match(TEAMS[4], TEAMS[5]),
-        simulate_match(TEAMS[6], TEAMS[7]),
+        simulate_match(teams[0], teams[1]),
+        simulate_match(teams[2], teams[3]),
+        simulate_match(teams[4], teams[5]),
+        simulate_match(teams[6], teams[7]),
     ]
 
     semifinal_winners = [
