@@ -1,9 +1,9 @@
 import random
 
 try:
-    from predictor import predict_match
+    from backend.predictor import predict_match
 except ModuleNotFoundError:
-    from src.predictor import predict_match
+    from backend.predictor import predict_match
 
 
 random.seed(42)

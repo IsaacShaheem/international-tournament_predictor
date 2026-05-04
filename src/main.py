@@ -1,4 +1,4 @@
-from predictor import ELO_RATINGS, predict_match
+from backend.predictor import ELO_RATINGS, predict_match
 
 
 def print_prediction(team1, team2):
