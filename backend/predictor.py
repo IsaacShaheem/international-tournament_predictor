@@ -1,8 +1,10 @@
 import csv
 import math
+import os
 
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA_FILE = os.path.join(BASE_DIR, "data", "results.csv")
 
-DATA_FILE = "data/results.csv"
 STARTING_RATING = 1500
 K_FACTOR = 20
 

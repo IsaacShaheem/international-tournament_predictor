@@ -1,7 +1,7 @@
 import random
 
 try:
-    from backend.predictor import predict_match
+    from predictor import predict_match
 except ModuleNotFoundError:
     from backend.predictor import predict_match
 
